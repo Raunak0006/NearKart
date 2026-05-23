@@ -1,65 +1,181 @@
-import Image from "next/image";
+'use client';
 
-export default function Home() {
+import React from 'react';
+import Link from 'next/link';
+import { ShoppingBag, ArrowRight, ShieldCheck, Zap, MessageSquare, MapPin } from 'lucide-react';
+
+export default function WelcomePage() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
+    <div className="flex flex-col min-h-screen bg-white dark:bg-slate-950 transition-colors duration-200">
+      
+      {/* Navbar Header */}
+      <header className="px-4 lg:px-6 h-16 flex items-center justify-between border-b border-slate-100 dark:border-slate-900">
+        <Link href="#" className="flex items-center gap-2 group">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img 
+            src="/logo.png" 
+            alt="NearKart Logo" 
+            className="h-10 w-10 object-contain rounded-xl shadow-md group-hover:scale-105 transition-transform duration-200"
+          />
+          <span className="text-xl font-bold tracking-tight text-slate-900 dark:text-white">
+            Near<span className="text-[#10b981]">Kart</span>
+          </span>
+        </Link>
+        
+        <nav className="flex gap-4 sm:gap-6">
+          <Link href="/login" className="text-sm font-bold text-slate-700 hover:text-emerald-500 dark:text-slate-300 dark:hover:text-emerald-400 py-2 transition-colors">
+            Log In
+          </Link>
+          <Link href="/signup" className="rounded-xl bg-emerald-500 px-4 py-2 text-sm font-bold text-white hover:bg-emerald-600 shadow-md shadow-emerald-500/15 transition-all">
+            Sign Up
+          </Link>
+        </nav>
+      </header>
+
+      {/* Main Body */}
+      <main className="flex-1">
+        
+        {/* Hero Section */}
+        <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48 flex items-center justify-center bg-gradient-to-b from-emerald-50/40 via-transparent to-transparent dark:from-emerald-950/10">
+          <div className="container px-4 md:px-6 max-w-7xl">
+            <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_500px] items-center">
+              
+              {/* Left Column Text */}
+              <div className="flex flex-col justify-center space-y-6">
+                <div className="space-y-4">
+                  <div className="inline-flex items-center gap-1.5 rounded-full bg-emerald-100 px-3 py-1.5 text-xs font-bold text-emerald-800 dark:bg-emerald-950/50 dark:text-emerald-400">
+                    <MapPin className="h-3.5 w-3.5" />
+                    <span>Hyperlocal Store Delivery & Pickup</span>
+                  </div>
+                  <h1 className="text-3xl font-extrabold tracking-tight sm:text-5xl xl:text-6xl/none text-slate-950 dark:text-white leading-tight">
+                    Find Nearby Grocery Stores <span className="text-emerald-500">Instantly</span>
+                  </h1>
+                  <p className="max-w-[600px] text-slate-550 md:text-xl dark:text-slate-400 font-medium">
+                    Discover local vendors, search real-time inventories, chat directly with shopkeepers, and get your fresh groceries delivered in minutes.
+                  </p>
+                </div>
+
+                <div className="flex flex-col gap-2 min-[400px]:flex-row">
+                  <Link
+                    href="/signup"
+                    className="inline-flex h-12 items-center justify-center gap-2 rounded-xl bg-emerald-500 px-8 text-sm font-bold text-white shadow-lg shadow-emerald-500/20 hover:bg-emerald-600 hover:shadow-none transition-all"
+                  >
+                    <span>Get Started</span>
+                    <ArrowRight className="h-4 w-4" />
+                  </Link>
+                  <Link
+                    href="/login"
+                    className="inline-flex h-12 items-center justify-center rounded-xl border border-slate-200 bg-white px-8 text-sm font-bold text-slate-700 hover:bg-slate-50 dark:border-slate-800 dark:bg-slate-900 dark:text-slate-200 dark:hover:bg-slate-800 transition-colors"
+                  >
+                    <span>Browse Stores</span>
+                  </Link>
+                </div>
+              </div>
+
+              {/* Right Column Graphic Card */}
+              <div className="mx-auto w-full max-w-[450px] lg:max-w-none flex justify-center">
+                <div className="relative w-full aspect-square rounded-3xl border border-slate-100 bg-white p-6 shadow-2xl dark:border-slate-800 dark:bg-slate-900 overflow-hidden flex flex-col justify-between">
+                  <div className="absolute top-0 right-0 h-40 w-40 bg-emerald-500/10 rounded-full blur-3xl" />
+                  
+                  {/* Visual UI preview elements representing NearKart dashboard */}
+                  <div className="flex justify-between items-center border-b border-slate-100 dark:border-slate-800 pb-4 z-10">
+                    <div className="flex items-center gap-2">
+                      <div className="h-9 w-9 rounded-full bg-emerald-500 text-white flex items-center justify-center font-bold">
+                        NK
+                      </div>
+                      <div>
+                        <p className="text-xs font-extrabold text-slate-900 dark:text-white">NearKart QuickShop</p>
+                        <p className="text-[10px] text-slate-400">Green Grocers • 0.8km away</p>
+                      </div>
+                    </div>
+                    <span className="rounded-full bg-emerald-100 px-2 py-0.5 text-[9px] font-bold text-emerald-800 dark:bg-emerald-950/40 dark:text-emerald-400">
+                      OPEN
+                    </span>
+                  </div>
+
+                  {/* Groceries graphic layout inside mockup */}
+                  <div className="my-8 flex justify-around items-center gap-4 z-10">
+                    <div className="text-center space-y-1.5 p-3 rounded-2xl bg-slate-50 dark:bg-slate-950 border border-slate-100 dark:border-slate-850 flex-1">
+                      <span className="text-3xl">🍎</span>
+                      <p className="text-[11px] font-bold">Apples</p>
+                      <p className="text-[10px] font-extrabold text-emerald-500">₹180/kg</p>
+                    </div>
+                    <div className="text-center space-y-1.5 p-3 rounded-2xl bg-slate-50 dark:bg-slate-950 border border-slate-100 dark:border-slate-850 flex-1">
+                      <span className="text-3xl">🥛</span>
+                      <p className="text-[11px] font-bold">Fresh Milk</p>
+                      <p className="text-[10px] font-extrabold text-emerald-500">₹28/pkt</p>
+                    </div>
+                    <div className="text-center space-y-1.5 p-3 rounded-2xl bg-slate-50 dark:bg-slate-950 border border-slate-100 dark:border-slate-850 flex-1">
+                      <span className="text-3xl">🍞</span>
+                      <p className="text-[11px] font-bold">Brown Bread</p>
+                      <p className="text-[10px] font-extrabold text-emerald-500">₹45/pc</p>
+                    </div>
+                  </div>
+
+                  {/* Visual bottom mockup navigation */}
+                  <div className="rounded-2xl bg-emerald-500 text-white p-3.5 flex items-center justify-between text-xs font-bold shadow-md shadow-emerald-500/10 z-10">
+                    <div className="flex items-center gap-2">
+                      <ShoppingBag className="h-4.5 w-4.5" />
+                      <span>Checkout (3 items)</span>
+                    </div>
+                    <span className="text-[13px]">₹253 →</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+        {/* Feature Cards Grid */}
+        <section className="w-full py-12 md:py-24 bg-slate-50 dark:bg-slate-950/60 border-t border-b border-slate-100 dark:border-slate-900 flex justify-center">
+          <div className="container px-4 md:px-6 max-w-7xl">
+            <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+              
+              <div className="rounded-2xl border border-slate-100 bg-white p-6 dark:border-slate-800 dark:bg-slate-900 shadow-sm flex flex-col gap-3">
+                <div className="rounded-xl bg-emerald-100 p-3 w-fit dark:bg-emerald-950/50">
+                  <Zap className="h-6 w-6 text-emerald-600 dark:text-emerald-450" />
+                </div>
+                <h3 className="text-base font-bold text-slate-950 dark:text-white">Instant Hyperlocal Delivery</h3>
+                <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
+                  Get groceries delivered from shops less than 2 km away in under 15-20 minutes. Keep it local, fresh, and immediate.
+                </p>
+              </div>
+
+              <div className="rounded-2xl border border-slate-100 bg-white p-6 dark:border-slate-800 dark:bg-slate-900 shadow-sm flex flex-col gap-3">
+                <div className="rounded-xl bg-emerald-100 p-3 w-fit dark:bg-emerald-950/50">
+                  <MessageSquare className="h-6 w-6 text-emerald-600 dark:text-emerald-450" />
+                </div>
+                <h3 className="text-base font-bold text-slate-950 dark:text-white">Direct Chat & Negotiations</h3>
+                <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
+                  Chat directly with store owners to verify availability, request special orders, or negotiate custom bundle prices.
+                </p>
+              </div>
+
+              <div className="rounded-2xl border border-slate-100 bg-white p-6 dark:border-slate-800 dark:bg-slate-900 shadow-sm flex flex-col gap-3">
+                <div className="rounded-xl bg-emerald-100 p-3 w-fit dark:bg-emerald-950/50">
+                  <ShieldCheck className="h-6 w-6 text-emerald-600 dark:text-emerald-450" />
+                </div>
+                <h3 className="text-base font-bold text-slate-950 dark:text-white">Flexible Delivery & Pickup</h3>
+                <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
+                  Choose between high-speed home deliveries or quick store pickups to bypass queues and save on delivery charges.
+                </p>
+              </div>
+
+            </div>
+          </div>
+        </section>
       </main>
+
+      {/* Footer */}
+      <footer className="border-t border-slate-100 dark:border-slate-900 px-4 md:px-6 py-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-slate-450 dark:text-slate-500">
+        <p>&copy; 2026 NearKart Inc. All rights reserved.</p>
+        <div className="flex gap-4">
+          <Link href="#" className="hover:underline">Privacy Policy</Link>
+          <Link href="#" className="hover:underline">Terms of Service</Link>
+        </div>
+      </footer>
+
     </div>
   );
 }
