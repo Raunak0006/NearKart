@@ -63,7 +63,7 @@ export const NearKartProvider: React.FC<{ children: React.ReactNode }> = ({ chil
     email: 'Raunaksrivastava@example.com',
     phone: '+1 987 654 3210',
     role: 'customer',
-    avatarUrl: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&auto=format&fit=crop&q=60'
+    avatarUrl: '/pug_avatar.png'
   });
 
   const [shops, setShops] = useState<Shop[]>([]);
@@ -154,17 +154,17 @@ export const NearKartProvider: React.FC<{ children: React.ReactNode }> = ({ chil
         email: 'Raunaksrivastava@example.com',
         phone: '+1 987 654 3210',
         role: 'customer',
-        avatarUrl: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&auto=format&fit=crop&q=60'
+        avatarUrl: '/pug_avatar.png'
       });
     } else {
       setCurrentUser({
         id: 'shop_3', // Operating as Royal Bakery
-        name: 'John Baker',
-        email: 'john.baker@royalbakery.com',
+        name: 'Raunak Srivastava',
+        email: 'RaunakSrivastava@royalbakery.com',
         phone: '+1 234 567 8903',
         role: 'shopkeeper',
         shopId: 'shop_3',
-        avatarUrl: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&auto=format&fit=crop&q=60'
+        avatarUrl: '/pug_avatar.png'
       });
     }
   };
