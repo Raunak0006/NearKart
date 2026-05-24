@@ -15,7 +15,7 @@ export default function CustomerProfilePage() {
   const [isEditing, setIsEditing] = useState(false);
 
   const [addresses, setAddresses] = useState([
-    { id: '1', label: 'Home', detail: 'Flat 402, Sunshine Heights, Sector 15, Vashi, Navi Mumbai' },
+    { id: '1', label: 'Home', detail: 'Flat 402, LDA Colony , Lucknow' },
     { id: '2', label: 'Office', detail: 'Reliable Tech Park, Tower A, Sector 19, Airoli, Navi Mumbai' }
   ]);
 

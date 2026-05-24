@@ -402,7 +402,7 @@ export const MOCK_ORDERS: Order[] = [
     type: 'delivery',
     totalPrice: 212, // 2*45 + 4*28 + 10 delivery fee
     deliveryFee: 10,
-    address: 'Flat 402, Sunshine Heights, Sector 15, Vashi',
+    address: 'Flat 402, LDA Colony , Lucknow',
     timestamp: new Date(Date.now() - 10 * 60000).toISOString(),
     riderName: 'Rahul Kumar',
     riderPhone: '+1 987 654 3210',
@@ -426,7 +426,7 @@ export const MOCK_ORDERS: Order[] = [
     type: 'delivery',
     totalPrice: 344, // 245 + 3*28 + 15 delivery fee
     deliveryFee: 15,
-    address: 'Flat 402, Sunshine Heights, Sector 15, Vashi',
+    address: 'Flat 402, LDA Colony , Lucknow',
     timestamp: new Date(Date.now() - 180 * 60000).toISOString()
   }
 ];

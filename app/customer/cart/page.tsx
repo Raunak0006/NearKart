@@ -11,7 +11,7 @@ export default function CartPage() {
   const { cart, updateCartQuantity, removeFromCart, cartTotal, placeOrder } = useNearKart();
 
   const [deliveryType, setDeliveryType] = useState<'delivery' | 'pickup'>('delivery');
-  const [address, setAddress] = useState('Flat 402, Sunshine Heights, Sector 15, Vashi, Navi Mumbai');
+  const [address, setAddress] = useState('Flat 402, LDA Colony , Lucknow');
   const [isPlacing, setIsPlacing] = useState(false);
 
   const deliveryFee = deliveryType === 'delivery' ? 15 : 0;
