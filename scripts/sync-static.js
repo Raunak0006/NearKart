@@ -11,7 +11,7 @@ const rootClutter = [
   '404.html', 'favicon.ico', 'logo.png', 'vercel.svg', 'window.svg', 
   'file.svg', 'globe.svg', 'next.svg', '__next.__PAGE__.txt', 
   '__next._full.txt', '__next._head.txt', '__next._index.txt', 
-  '__next._tree.txt', 'index.txt', 'index.html'
+  '__next._tree.txt', 'index.txt', 'index.html', '.nojekyll'
 ];
 
 rootClutter.forEach(item => {
@@ -30,10 +30,12 @@ if (fs.existsSync(outDir)) {
 
   // Copy compiled static files into NearKart subdirectory (for local Live Server on port 5500)
   fs.cpSync(outDir, deployDir, { recursive: true, force: true });
+  fs.writeFileSync(path.join(deployDir, '.nojekyll'), '# Bypass Jekyll', 'utf8');
   console.log('Successfully synchronized static build files to /NearKart directory.');
 
   // Copy compiled static files directly to the root directory (for GitHub Pages hosting)
   fs.cpSync(outDir, rootDir, { recursive: true, force: true });
+  fs.writeFileSync(path.join(rootDir, '.nojekyll'), '# Bypass Jekyll', 'utf8');
   console.log('Successfully synchronized static build files to the root directory for GitHub Pages.');
 } else {
   console.error('Out directory not found. Please run next build first.');
