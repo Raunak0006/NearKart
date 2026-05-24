@@ -63,7 +63,7 @@ export const NearKartProvider: React.FC<{ children: React.ReactNode }> = ({ chil
     email: 'Raunaksrivastava@example.com',
     phone: '+1 987 654 3210',
     role: 'customer',
-    avatarUrl: '/pug_avatar.png'
+    avatarUrl: '/NearKart/pug_avatar.png'
   });
 
   const [shops, setShops] = useState<Shop[]>([]);
@@ -154,7 +154,7 @@ export const NearKartProvider: React.FC<{ children: React.ReactNode }> = ({ chil
         email: 'Raunaksrivastava@example.com',
         phone: '+1 987 654 3210',
         role: 'customer',
-        avatarUrl: '/pug_avatar.png'
+        avatarUrl: '/NearKart/pug_avatar.png'
       });
     } else {
       setCurrentUser({
@@ -164,7 +164,7 @@ export const NearKartProvider: React.FC<{ children: React.ReactNode }> = ({ chil
         phone: '+1 234 567 8903',
         role: 'shopkeeper',
         shopId: 'shop_3',
-        avatarUrl: '/pug_avatar.png'
+        avatarUrl: '/NearKart/pug_avatar.png'
       });
     }
   };

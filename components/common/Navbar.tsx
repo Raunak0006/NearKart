@@ -33,7 +33,7 @@ export default function Navbar() {
           <Link href={role === 'customer' ? '/customer/dashboard' : '/shopkeeper/dashboard'} className="flex items-center gap-2 group">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img 
-              src="/logo.png" 
+              src="/NearKart/logo.png" 
               alt="NearKart Logo" 
               className="h-10 w-10 object-contain rounded-xl shadow-md group-hover:scale-105 transition-transform duration-200"
             />

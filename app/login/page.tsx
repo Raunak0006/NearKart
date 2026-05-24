@@ -47,7 +47,7 @@ export default function LoginPage() {
           <Link href="/" className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-[#1a1513] border border-[#3a2f29] shadow-md mb-3 overflow-hidden">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img 
-              src="/logo.png" 
+              src="/NearKart/logo.png" 
               alt="NearKart Logo" 
               className="h-10 w-10 object-contain"
             />

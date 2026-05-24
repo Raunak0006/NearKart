@@ -31,8 +31,8 @@ export const MOCK_SHOPS: Shop[] = [
     deliveryAvailable: true,
     deliveryFee: 25,
     minOrder: 149,
-    bannerImage: '/shops/shop_2_banner.png',
-    logoImage: '/shops/shop_2_logo.png',
+    bannerImage: '/NearKart/shops/shop_2_banner.png',
+    logoImage: '/NearKart/shops/shop_2_logo.png',
     address: '45 Orchard Road, Sector 12, Shopping Plaza',
     contact: '+1 234 567 8902',
     operatingHours: '08:00 AM - 09:00 PM'
