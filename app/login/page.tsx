@@ -37,14 +37,14 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col justify-center items-center px-4 bg-white dark:bg-slate-950 transition-colors duration-200">
+    <div className="min-h-screen flex flex-col justify-center items-center px-4 bg-[#dfb17b] transition-colors duration-200">
       
-      <div className="w-full max-w-[420px] rounded-3xl border border-slate-100 bg-white p-6 sm:p-8 shadow-2xl dark:border-slate-800 dark:bg-slate-900 z-10 relative">
+      <div className="w-full max-w-[420px] rounded-3xl border border-slate-800 bg-slate-950 p-6 sm:p-8 shadow-2xl z-10 relative text-white">
         <div className="absolute top-0 right-0 h-32 w-32 bg-emerald-500/10 rounded-full blur-2xl" />
 
         {/* Brand Header */}
         <div className="text-center mb-8 relative">
-          <Link href="/" className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 shadow-md mb-3 overflow-hidden">
+          <Link href="/" className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-slate-900 border border-slate-800 shadow-md mb-3 overflow-hidden">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img 
               src="/logo.png" 
@@ -52,8 +52,8 @@ export default function LoginPage() {
               className="h-10 w-10 object-contain"
             />
           </Link>
-          <h2 className="text-2xl font-extrabold text-slate-950 dark:text-white">Welcome Back</h2>
-          <p className="text-xs text-slate-450 dark:text-slate-400 mt-1.5 font-medium">
+          <h2 className="text-2xl font-extrabold text-white">Welcome Back</h2>
+          <p className="text-xs text-white/80 mt-1.5 font-medium">
             Sign in to start managing orders or shopping groceries
           </p>
         </div>
@@ -62,14 +62,14 @@ export default function LoginPage() {
         <form onSubmit={handleLogin} className="space-y-4 relative">
           
           {/* Role selector chips */}
-          <div className="grid grid-cols-2 gap-2 p-1 rounded-xl bg-slate-50 dark:bg-slate-950/60 border border-slate-100 dark:border-slate-850">
+          <div className="grid grid-cols-2 gap-2 p-1 rounded-xl bg-slate-900 border border-slate-800">
             <button
               type="button"
               onClick={() => setSelectedRole('customer')}
               className={`py-2 text-xs font-bold rounded-lg transition-all ${
                 selectedRole === 'customer'
-                  ? 'bg-white text-emerald-600 shadow-sm dark:bg-slate-900 dark:text-emerald-400'
-                  : 'text-slate-500 hover:text-slate-800 dark:text-slate-400 dark:hover:text-slate-200'
+                  ? 'bg-slate-950 text-emerald-500 shadow-sm'
+                  : 'text-slate-400 hover:text-white'
               }`}
             >
               Customer
@@ -79,8 +79,8 @@ export default function LoginPage() {
               onClick={() => setSelectedRole('shopkeeper')}
               className={`py-2 text-xs font-bold rounded-lg transition-all ${
                 selectedRole === 'shopkeeper'
-                  ? 'bg-white text-emerald-600 shadow-sm dark:bg-slate-900 dark:text-emerald-400'
-                  : 'text-slate-500 hover:text-slate-800 dark:text-slate-400 dark:hover:text-slate-200'
+                  ? 'bg-slate-950 text-emerald-500 shadow-sm'
+                  : 'text-slate-400 hover:text-white'
               }`}
             >
               Shopkeeper
@@ -89,8 +89,8 @@ export default function LoginPage() {
 
           {/* Email / Phone input */}
           <div className="space-y-1">
-            <label className="text-[10px] font-bold uppercase tracking-wider text-slate-400 dark:text-slate-500">Email or Phone</label>
-            <div className="flex items-center rounded-xl border border-slate-200 bg-transparent px-3.5 py-1.5 dark:border-slate-800">
+            <label className="text-[10px] font-bold uppercase tracking-wider text-slate-300">Email or Phone</label>
+            <div className="flex items-center rounded-xl border border-slate-800 bg-slate-900 px-3.5 py-1.5">
               <Mail className="h-4.5 w-4.5 text-slate-400 mr-2 shrink-0" />
               <input
                 type="text"
@@ -98,7 +98,7 @@ export default function LoginPage() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="e.g. name@example.com"
-                className="flex-1 bg-transparent py-1.5 text-xs sm:text-sm text-slate-850 dark:text-white focus:outline-none"
+                className="flex-1 bg-transparent py-1.5 text-xs sm:text-sm text-white focus:outline-none placeholder:text-slate-500"
               />
             </div>
           </div>
@@ -106,10 +106,10 @@ export default function LoginPage() {
           {/* Password input */}
           <div className="space-y-1">
             <div className="flex justify-between items-center">
-              <label className="text-[10px] font-bold uppercase tracking-wider text-slate-400 dark:text-slate-500">Password</label>
-              <Link href="#" className="text-[10px] font-bold text-emerald-600 hover:underline dark:text-emerald-400">Forgot Password?</Link>
+              <label className="text-[10px] font-bold uppercase tracking-wider text-slate-300">Password</label>
+              <Link href="#" className="text-[10px] font-bold text-emerald-500 hover:underline">Forgot Password?</Link>
             </div>
-            <div className="flex items-center rounded-xl border border-slate-200 bg-transparent px-3.5 py-1.5 dark:border-slate-800">
+            <div className="flex items-center rounded-xl border border-slate-800 bg-slate-900 px-3.5 py-1.5">
               <Lock className="h-4.5 w-4.5 text-slate-400 mr-2 shrink-0" />
               <input
                 type="password"
@@ -117,7 +117,7 @@ export default function LoginPage() {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 placeholder="Enter password"
-                className="flex-1 bg-transparent py-1.5 text-xs sm:text-sm text-slate-850 dark:text-white focus:outline-none"
+                className="flex-1 bg-transparent py-1.5 text-xs sm:text-sm text-white focus:outline-none placeholder:text-slate-500"
               />
             </div>
           </div>
@@ -126,7 +126,7 @@ export default function LoginPage() {
           <button
             type="submit"
             disabled={loading}
-            className="w-full flex h-11 items-center justify-center gap-2 rounded-xl bg-emerald-500 text-sm font-bold text-white shadow-lg shadow-emerald-500/25 hover:bg-emerald-600 hover:shadow-none transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+            className="w-full flex h-11 items-center justify-center gap-2 rounded-xl bg-emerald-500 text-sm font-bold text-white shadow-lg shadow-emerald-500/10 hover:bg-emerald-600 hover:shadow-none transition-all disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer"
           >
             <span>{loading ? 'Signing In...' : 'Sign In'}</span>
             {!loading && <ArrowRight className="h-4 w-4" />}
@@ -134,15 +134,15 @@ export default function LoginPage() {
         </form>
 
         <div className="relative my-6 text-center">
-          <div className="absolute inset-0 flex items-center"><div className="w-full border-t border-slate-100 dark:border-slate-800" /></div>
-          <span className="relative bg-white dark:bg-slate-900 px-3 text-[10px] font-bold uppercase text-slate-400 dark:text-slate-500">Or Continue With</span>
+          <div className="absolute inset-0 flex items-center"><div className="w-full border-t border-slate-800" /></div>
+          <span className="relative bg-slate-950 px-3 text-[10px] font-bold uppercase text-slate-400">Or Continue With</span>
         </div>
 
         {/* Google login mock button */}
         <button
           onClick={handleGoogleLoginMock}
           disabled={loading}
-          className="w-full flex h-11 items-center justify-center gap-2.5 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 dark:border-slate-800 dark:bg-slate-900 dark:hover:bg-slate-800 text-xs sm:text-sm font-bold text-slate-700 dark:text-slate-200 transition-colors"
+          className="w-full flex h-11 items-center justify-center gap-2.5 rounded-xl border border-slate-800 bg-slate-950 hover:bg-slate-900 text-xs sm:text-sm font-bold text-slate-200 transition-colors cursor-pointer"
         >
           <svg className="h-4 w-4 shrink-0" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4" />
@@ -154,9 +154,9 @@ export default function LoginPage() {
         </button>
 
         {/* Signup Redirect */}
-        <div className="text-center mt-8 text-xs font-semibold text-slate-550 dark:text-slate-400">
+        <div className="text-center mt-8 text-xs font-semibold text-white/80">
           <span>Don&apos;t have an account? </span>
-          <Link href="/signup" className="text-emerald-600 hover:underline dark:text-emerald-400">Create account</Link>
+          <Link href="/signup" className="text-emerald-500 hover:underline">Create account</Link>
         </div>
 
       </div>
