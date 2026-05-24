@@ -90,7 +90,7 @@ export default function SignupPage() {
                 required
                 value={name}
                 onChange={(e) => setName(e.target.value)}
-                placeholder="John Doe"
+                placeholder="eg.- Raunak Srivastava"
                 className="flex-1 bg-transparent py-1.5 text-xs sm:text-sm text-white focus:outline-none placeholder:text-slate-500"
               />
             </div>
@@ -122,7 +122,7 @@ export default function SignupPage() {
                 required
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
-                placeholder="+1 (123) 456-7890"
+                placeholder="+91"
                 className="flex-1 bg-transparent py-1.5 text-xs sm:text-sm text-white focus:outline-none placeholder:text-slate-500"
               />
             </div>
