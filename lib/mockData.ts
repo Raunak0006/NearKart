@@ -435,7 +435,7 @@ export const MOCK_CHAT_MESSAGES: Message[] = [
   {
     id: 'm_1',
     senderId: 'customer_1',
-    senderName: 'Jane Doe',
+    senderName: 'Raunak Srivastava',
     senderRole: 'customer',
     content: 'Hi, are the Shimla apples fresh today?',
     timestamp: new Date(Date.now() - 45 * 60000).toISOString()
@@ -451,7 +451,7 @@ export const MOCK_CHAT_MESSAGES: Message[] = [
   {
     id: 'm_3',
     senderId: 'customer_1',
-    senderName: 'Jane Doe',
+    senderName: 'Raunak Srivastava',
     senderRole: 'customer',
     content: 'Great! I will place an order for 2 kg.',
     timestamp: new Date(Date.now() - 38 * 60000).toISOString()

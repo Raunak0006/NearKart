@@ -82,7 +82,7 @@ export default function OrderCard({ order }: OrderCardProps) {
       <div className="py-3 text-xs space-y-1.5">
         <div className="flex items-center gap-1.5 text-slate-650 dark:text-slate-300">
           <User className="h-3.5 w-3.5 text-slate-400" />
-          <span>Customer: <strong>Jane Doe</strong></span>
+          <span>Customer: <strong>Raunak Srivastava</strong></span>
         </div>
         {order.type === 'delivery' && (
           <div className="flex items-start gap-1.5 text-slate-650 dark:text-slate-300 leading-normal">

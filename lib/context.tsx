@@ -59,8 +59,8 @@ export const NearKartProvider: React.FC<{ children: React.ReactNode }> = ({ chil
   const [role, setRole] = useState<UserRole>('customer');
   const [currentUser, setCurrentUser] = useState<User>({
     id: 'customer_1',
-    name: 'Jane Doe',
-    email: 'jane.doe@example.com',
+    name: 'Raunak Srivastava',
+    email: 'Raunaksrivastava@example.com',
     phone: '+1 987 654 3210',
     role: 'customer',
     avatarUrl: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&auto=format&fit=crop&q=60'
@@ -150,8 +150,8 @@ export const NearKartProvider: React.FC<{ children: React.ReactNode }> = ({ chil
     if (newRole === 'customer') {
       setCurrentUser({
         id: 'customer_1',
-        name: 'Jane Doe',
-        email: 'jane.doe@example.com',
+        name: 'Raunak Srivastava',
+        email: 'Raunaksrivastava@example.com',
         phone: '+1 987 654 3210',
         role: 'customer',
         avatarUrl: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&auto=format&fit=crop&q=60'

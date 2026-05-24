@@ -62,7 +62,7 @@ export default function ShopkeeperChatPage() {
               👩
             </div>
             <div className="flex-1 min-w-0">
-              <h4 className="text-xs font-bold truncate">Jane Doe</h4>
+              <h4 className="text-xs font-bold truncate">Raunak Srivastava</h4>
               <p className="text-[10px] text-slate-450 dark:text-slate-400 truncate mt-0.5">
                 {threadMessages.slice(-1)[0]?.content || 'Active conversation'}
               </p>
@@ -82,7 +82,7 @@ export default function ShopkeeperChatPage() {
             </div>
             <div>
               <h3 className="text-sm font-bold text-slate-950 dark:text-white">
-                Jane Doe (Customer)
+                Raunak Srivastava (Customer)
               </h3>
               <p className="text-[10px] text-emerald-500 font-bold uppercase tracking-wider">
                 Active Thread
