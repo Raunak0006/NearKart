@@ -38,7 +38,7 @@ export default function Navbar() {
               className="h-10 w-10 object-contain rounded-xl shadow-md group-hover:scale-105 transition-transform duration-200"
             />
             <span className="text-xl font-bold tracking-tight text-slate-900 dark:text-white">
-              Near<span className="text-[#10b981]">Kart</span>
+              Raashan<span className="text-[#10b981]">Kart</span>
             </span>
           </Link>
 
