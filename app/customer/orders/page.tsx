@@ -2,13 +2,13 @@
 
 import React from 'react';
 import { useRouter } from 'next/navigation';
-import { useNearKart } from '@/lib/context';
+import { useRaashanKart } from '@/lib/context';
 import { ShoppingBag, Calendar, CheckCircle2, ChevronRight, RefreshCcw } from 'lucide-react';
 import Link from 'next/link';
 
 export default function CustomerOrdersPage() {
   const router = useRouter();
-  const { orders, addToCart } = useNearKart();
+  const { orders, addToCart } = useRaashanKart();
 
   const handleReorder = (e: React.MouseEvent, orderItems: any[]) => {
     e.preventDefault();

@@ -6,12 +6,12 @@ import CategoryCard from '@/components/customer/CategoryCard';
 import ShopCard from '@/components/customer/ShopCard';
 import ProductCard from '@/components/customer/ProductCard';
 import { ShopCardSkeleton, ProductCardSkeleton } from '@/components/ui/Skeleton';
-import { useNearKart } from '@/lib/context';
+import { useRaashanKart } from '@/lib/context';
 import { Sparkles, MapPin, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 
 export default function CustomerDashboard() {
-  const { shops, products } = useNearKart();
+  const { shops, products } = useRaashanKart();
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {

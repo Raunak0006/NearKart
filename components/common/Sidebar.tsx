@@ -12,11 +12,11 @@ import {
   Store,
   Power
 } from 'lucide-react';
-import { useNearKart } from '@/lib/context';
+import { useRaashanKart } from '@/lib/context';
 
 export default function Sidebar() {
   const pathname = usePathname();
-  const { role, shops, toggleShopStatus } = useNearKart();
+  const { role, shops, toggleShopStatus } = useRaashanKart();
 
   // If role is customer, we use bottom navigation instead of sidebar
   if (role === 'customer') return null;
@@ -124,7 +124,7 @@ export default function Sidebar() {
 
       {/* Footer copyright */}
       <div className="text-center text-[10px] text-slate-400 dark:text-slate-500">
-        <p>&copy; 2026 NearKart Partner</p>
+        <p>&copy; 2026 RaashanKart Partner</p>
         <p className="mt-0.5">V1.0.0 (Demo Mode)</p>
       </div>
     </aside>

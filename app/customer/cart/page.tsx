@@ -2,13 +2,13 @@
 
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { useNearKart } from '@/lib/context';
+import { useRaashanKart } from '@/lib/context';
 import { ShoppingCart, Plus, Minus, Trash2, MapPin, Truck, Store, ArrowRight, CreditCard } from 'lucide-react';
 import Link from 'next/link';
 
 export default function CartPage() {
   const router = useRouter();
-  const { cart, updateCartQuantity, removeFromCart, cartTotal, placeOrder } = useNearKart();
+  const { cart, updateCartQuantity, removeFromCart, cartTotal, placeOrder } = useRaashanKart();
 
   const [deliveryType, setDeliveryType] = useState<'delivery' | 'pickup'>('delivery');
   const [address, setAddress] = useState('Flat 402, LDA Colony , Lucknow');

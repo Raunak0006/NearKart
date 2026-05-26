@@ -2,12 +2,12 @@
 
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { useNearKart } from '@/lib/context';
+import { useRaashanKart } from '@/lib/context';
 import { ArrowLeft, Save, Plus, Package } from 'lucide-react';
 
 export default function AddProductPage() {
   const router = useRouter();
-  const { addProduct } = useNearKart();
+  const { addProduct } = useRaashanKart();
 
   const [name, setName] = useState('');
   const [category, setCategory] = useState('Milk & Dairy');

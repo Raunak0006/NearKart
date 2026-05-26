@@ -1,12 +1,12 @@
 'use client';
 
 import React, { useState, useEffect, useRef } from 'react';
-import { useNearKart } from '@/lib/context';
+import { useRaashanKart } from '@/lib/context';
 import { Send, Image, MessageSquare, Plus, Reply } from 'lucide-react';
 import ChatBubble from '@/components/shared/ChatBubble';
 
 export default function ShopkeeperChatPage() {
-  const { messages, sendMessage, currentUser } = useNearKart();
+  const { messages, sendMessage, currentUser } = useRaashanKart();
 
   // Active customer threads. In our context, customer is customer_1 (Jane Doe)
   const [activeCustomerId, setActiveCustomerId] = useState<string>('customer_1');

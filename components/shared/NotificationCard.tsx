@@ -3,14 +3,14 @@
 import React from 'react';
 import { ShoppingBag, MessageSquare, Tag, AlertCircle, Clock } from 'lucide-react';
 import { Notification } from '@/types';
-import { useNearKart } from '@/lib/context';
+import { useRaashanKart } from '@/lib/context';
 
 interface NotificationCardProps {
   notification: Notification;
 }
 
 export default function NotificationCard({ notification }: NotificationCardProps) {
-  const { markNotificationAsRead } = useNearKart();
+  const { markNotificationAsRead } = useRaashanKart();
 
   const handleReadClick = () => {
     if (!notification.read) {

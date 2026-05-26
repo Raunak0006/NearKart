@@ -1,12 +1,12 @@
 'use client';
 
 import React, { useState, useEffect, useRef } from 'react';
-import { useNearKart } from '@/lib/context';
+import { useRaashanKart } from '@/lib/context';
 import { Send, Image, MessageSquare, Plus, RefreshCw, Smile } from 'lucide-react';
 import ChatBubble from '@/components/shared/ChatBubble';
 
 export default function CustomerChatPage() {
-  const { messages, sendMessage, shops, currentUser } = useNearKart();
+  const { messages, sendMessage, shops, currentUser } = useRaashanKart();
 
   // Find shops that we have chat logs with. We have mock messages with shop_2 (Organic Green Grocers) and shop_3 (Royal Bakery)
   // Let's filter shops to active threads.

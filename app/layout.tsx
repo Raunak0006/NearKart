@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { NearKartProvider } from "@/lib/context";
+import { RaashanKartProvider } from "@/lib/context";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "NearKart - Hyperlocal Grocery Platform",
+  title: "RaashanKart - Hyperlocal Grocery Platform",
   description: "Find nearby grocery stores instantly, chat with shopkeepers, and get quick deliveries or pickups.",
 };
 
@@ -26,9 +26,9 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable} h-full`}>
       <body className="min-h-full flex flex-col text-slate-900 antialiased transition-colors duration-200">
-        <NearKartProvider>
+        <RaashanKartProvider>
           {children}
-        </NearKartProvider>
+        </RaashanKartProvider>
       </body>
     </html>
   );

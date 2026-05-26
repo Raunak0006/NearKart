@@ -3,14 +3,14 @@
 import React from 'react';
 import { Calendar, MapPin, Check, X, Truck, PackageCheck, User } from 'lucide-react';
 import { Order } from '@/types';
-import { useNearKart } from '@/lib/context';
+import { useRaashanKart } from '@/lib/context';
 
 interface OrderCardProps {
   order: Order;
 }
 
 export default function OrderCard({ order }: OrderCardProps) {
-  const { updateOrderStatus } = useNearKart();
+  const { updateOrderStatus } = useRaashanKart();
 
   const handleStatusChange = (status: Order['status']) => {
     updateOrderStatus(order.id, status);

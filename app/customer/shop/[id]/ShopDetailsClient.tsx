@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import { useParams, useRouter } from 'next/navigation';
 import { Star, Clock, MapPin, Phone, MessageSquare, ArrowLeft, Search } from 'lucide-react';
-import { useNearKart } from '@/lib/context';
+import { useRaashanKart } from '@/lib/context';
 import ProductCard from '@/components/customer/ProductCard';
 
 export default function ShopDetailsClient() {
@@ -11,7 +11,7 @@ export default function ShopDetailsClient() {
   const router = useRouter();
   const { id } = params;
   
-  const { shops, products, sendMessage } = useNearKart();
+  const { shops, products, sendMessage } = useRaashanKart();
 
   const [shopQuery, setShopQuery] = useState('');
   const [selectedSubCategory, setSelectedSubCategory] = useState('All');
@@ -79,7 +79,7 @@ export default function ShopDetailsClient() {
             />
           ) : (
             <div className="h-full w-full bg-gradient-to-br from-emerald-600 to-slate-900 flex items-center justify-center text-white/50 text-[10px] font-bold uppercase tracking-wider">
-              <span>NearKart Grocery Store</span>
+              <span>RaashanKart Grocery Store</span>
             </div>
           )}
           <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />

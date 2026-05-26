@@ -4,11 +4,11 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { Mail, Lock, ArrowRight } from 'lucide-react';
-import { useNearKart } from '@/lib/context';
+import { useRaashanKart } from '@/lib/context';
 
 export default function LoginPage() {
   const router = useRouter();
-  const { setRole } = useNearKart();
+  const { setRole } = useRaashanKart();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [selectedRole, setSelectedRole] = useState<'customer' | 'shopkeeper'>('customer');
@@ -47,8 +47,8 @@ export default function LoginPage() {
           <Link href="/" className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-[#1a1513] border border-[#3a2f29] shadow-md mb-3 overflow-hidden">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img 
-              src="/NearKart/logo.png" 
-              alt="NearKart Logo" 
+              src="/RaashanKart/logo.png" 
+              alt="RaashanKart Logo" 
               className="h-10 w-10 object-contain"
             />
           </Link>

@@ -4,12 +4,12 @@ import React, { useState, useEffect, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import SearchBar from '@/components/common/SearchBar';
 import ProductCard from '@/components/customer/ProductCard';
-import { useNearKart } from '@/lib/context';
+import { useRaashanKart } from '@/lib/context';
 import { SlidersHorizontal, MapPin, Star, Sparkles, HelpCircle } from 'lucide-react';
 
 function SearchContent() {
   const searchParams = useSearchParams();
-  const { products, shops } = useNearKart();
+  const { products, shops } = useRaashanKart();
   
   const initialQuery = searchParams.get('q') || '';
   const initialCategory = searchParams.get('category') || 'All';

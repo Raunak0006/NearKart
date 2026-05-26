@@ -2,13 +2,13 @@
 
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { useNearKart } from '@/lib/context';
+import { useRaashanKart } from '@/lib/context';
 import { User, MapPin, CreditCard, ChevronRight, LogOut, Check, Edit2 } from 'lucide-react';
 import Link from 'next/link';
 
 export default function CustomerProfilePage() {
   const router = useRouter();
-  const { currentUser, setCurrentUser } = useNearKart();
+  const { currentUser, setCurrentUser } = useRaashanKart();
 
   const [name, setName] = useState(currentUser.name);
   const [phone, setPhone] = useState(currentUser.phone);

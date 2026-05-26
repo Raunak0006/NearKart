@@ -4,14 +4,14 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { Star, Clock, MapPin, Heart } from 'lucide-react';
 import { Shop } from '@/types';
-import { useNearKart } from '@/lib/context';
+import { useRaashanKart } from '@/lib/context';
 
 interface ShopCardProps {
   shop: Shop;
 }
 
 export default function ShopCard({ shop }: ShopCardProps) {
-  const { favoriteShops, toggleFavoriteShop } = useNearKart();
+  const { favoriteShops, toggleFavoriteShop } = useRaashanKart();
   const isFavorite = favoriteShops.includes(shop.id);
   const [bannerError, setBannerError] = useState(false);
   const [logoError, setLogoError] = useState(false);
@@ -39,7 +39,7 @@ export default function ShopCard({ shop }: ShopCardProps) {
           />
         ) : (
           <div className="h-full w-full bg-gradient-to-br from-emerald-600 to-slate-900 flex items-center justify-center text-white/50 text-[10px] font-bold uppercase tracking-wider">
-            <span>NearKart Grocery Store</span>
+            <span>RaashanKart Grocery Store</span>
           </div>
         )}
         <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />

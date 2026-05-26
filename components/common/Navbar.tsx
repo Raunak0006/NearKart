@@ -4,10 +4,10 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { useRouter, usePathname } from 'next/navigation';
 import { ShoppingBag, Bell, Sun, Moon, MapPin, User, LogOut, RefreshCw } from 'lucide-react';
-import { useNearKart } from '@/lib/context';
+import { useRaashanKart } from '@/lib/context';
 
 export default function Navbar() {
-  const { role, setRole, theme, toggleTheme, notifications, currentUser, cartCount } = useNearKart();
+  const { role, setRole, theme, toggleTheme, notifications, currentUser, cartCount } = useRaashanKart();
   const router = useRouter();
   const pathname = usePathname();
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -33,8 +33,8 @@ export default function Navbar() {
           <Link href={role === 'customer' ? '/customer/dashboard' : '/shopkeeper/dashboard'} className="flex items-center gap-2 group">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img 
-              src="/NearKart/logo.png" 
-              alt="NearKart Logo" 
+              src="/RaashanKart/logo.png" 
+              alt="RaashanKart Logo" 
               className="h-10 w-10 object-contain rounded-xl shadow-md group-hover:scale-105 transition-transform duration-200"
             />
             <span className="text-xl font-bold tracking-tight text-slate-900 dark:text-white">

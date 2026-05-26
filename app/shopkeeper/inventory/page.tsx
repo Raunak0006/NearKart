@@ -1,12 +1,12 @@
 'use client';
 
 import React, { useState } from 'react';
-import { useNearKart } from '@/lib/context';
+import { useRaashanKart } from '@/lib/context';
 import { Search, Plus, Trash2, Edit2, ShieldAlert, Check } from 'lucide-react';
 import Link from 'next/link';
 
 export default function ShopInventoryPage() {
-  const { products, deleteProduct, updateProduct } = useNearKart();
+  const { products, deleteProduct, updateProduct } = useRaashanKart();
   const [searchVal, setSearchVal] = useState('');
   const [editStockId, setEditStockId] = useState<string | null>(null);
   const [tempStock, setTempStock] = useState<number>(0);

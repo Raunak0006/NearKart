@@ -1,14 +1,14 @@
 'use client';
 
 import React, { useState } from 'react';
-import { useNearKart } from '@/lib/context';
+import { useRaashanKart } from '@/lib/context';
 import ShopCard from '@/components/customer/ShopCard';
 import ProductCard from '@/components/customer/ProductCard';
 import { Heart, Store, ShoppingBag } from 'lucide-react';
 import Link from 'next/link';
 
 export default function CustomerFavoritesPage() {
-  const { favoriteShops, favoriteProducts, shops, products } = useNearKart();
+  const { favoriteShops, favoriteProducts, shops, products } = useRaashanKart();
   const [activeTab, setActiveTab] = useState<'shops' | 'products'>('shops');
 
   const favShopsList = shops.filter(s => favoriteShops.includes(s.id));

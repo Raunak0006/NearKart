@@ -3,7 +3,7 @@ const path = require('path');
 
 const outDir = path.join(__dirname, '../out');
 const rootDir = path.join(__dirname, '..');
-const deployDir = path.join(rootDir, 'NearKart');
+const deployDir = path.join(rootDir, 'RaashanKart');
 
 // Clean up old copied root static assets to avoid clutter
 const rootClutter = [
@@ -22,16 +22,16 @@ rootClutter.forEach(item => {
 });
 
 if (fs.existsSync(outDir)) {
-  // Clear and prepare NearKart deploy subdirectory
+  // Clear and prepare RaashanKart deploy subdirectory
   if (fs.existsSync(deployDir)) {
     fs.rmSync(deployDir, { recursive: true, force: true });
   }
   fs.mkdirSync(deployDir, { recursive: true });
 
-  // Copy compiled static files into NearKart subdirectory (for local Live Server on port 5500)
+  // Copy compiled static files into RaashanKart subdirectory (for local Live Server on port 5500)
   fs.cpSync(outDir, deployDir, { recursive: true, force: true });
   fs.writeFileSync(path.join(deployDir, '.nojekyll'), '# Bypass Jekyll', 'utf8');
-  console.log('Successfully synchronized static build files to /NearKart directory.');
+  console.log('Successfully synchronized static build files to /RaashanKart directory.');
 
   // Copy compiled static files directly to the root directory (for GitHub Pages hosting)
   fs.cpSync(outDir, rootDir, { recursive: true, force: true });

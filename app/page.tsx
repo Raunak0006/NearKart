@@ -13,8 +13,8 @@ export default function WelcomePage() {
         <Link href="#" className="flex items-center gap-2 group">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img 
-            src="/NearKart/logo.png" 
-            alt="NearKart Logo" 
+            src="/RaashanKart/logo.png" 
+            alt="RaashanKart Logo" 
             className="h-10 w-10 object-contain rounded-xl shadow-md group-hover:scale-105 transition-transform duration-200"
           />
           <span className="text-xl font-bold tracking-tight text-white">
@@ -77,14 +77,14 @@ export default function WelcomePage() {
                 <div className="relative w-full aspect-square rounded-3xl border border-[#3a2f29] bg-[#2d2520] p-6 shadow-2xl overflow-hidden flex flex-col justify-between text-white">
                   <div className="absolute top-0 right-0 h-40 w-40 bg-emerald-500/10 rounded-full blur-3xl" />
                   
-                  {/* Visual UI preview elements representing NearKart dashboard */}
+                  {/* Visual UI preview elements representing RaashanKart dashboard */}
                   <div className="flex justify-between items-center border-b border-[#3a2f29] pb-4 z-10">
                     <div className="flex items-center gap-2">
                       <div className="h-9 w-9 rounded-full bg-[#10b981] text-white flex items-center justify-center font-bold">
                         NK
                       </div>
                       <div>
-                        <p className="text-xs font-extrabold text-white">NearKart QuickShop</p>
+                        <p className="text-xs font-extrabold text-white">RaashanKart QuickShop</p>
                         <p className="text-[10px] text-slate-300">Green Grocers • 0.8km away</p>
                       </div>
                     </div>
@@ -169,7 +169,7 @@ export default function WelcomePage() {
 
       {/* Footer */}
       <footer className="border-t border-[#aa9585] px-4 md:px-6 py-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-[#2d2520] font-semibold">
-        <p>&copy; 2026 NearKart Inc. All rights reserved.</p>
+        <p>&copy; 2026 RaashanKart Inc. All rights reserved.</p>
         <div className="flex gap-4">
           <Link href="#" className="hover:underline">Privacy Policy</Link>
           <Link href="#" className="hover:underline">Terms of Service</Link>

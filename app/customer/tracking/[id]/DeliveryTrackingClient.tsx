@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { useParams, useRouter } from 'next/navigation';
-import { useNearKart } from '@/lib/context';
+import { useRaashanKart } from '@/lib/context';
 import { ArrowLeft, Clock, MapPin, Phone, MessageSquare, ShieldAlert } from 'lucide-react';
 import DeliveryProgress from '@/components/shared/DeliveryProgress';
 
@@ -11,7 +11,7 @@ export default function DeliveryTrackingClient() {
   const router = useRouter();
   const { id } = params;
 
-  const { orders } = useNearKart();
+  const { orders } = useRaashanKart();
 
   const order = orders.find(o => o.id === id);
 
@@ -129,7 +129,7 @@ export default function DeliveryTrackingClient() {
                 </div>
                 <div>
                   <h4 className="text-xs sm:text-sm font-bold text-slate-900 dark:text-white">{order.riderName || 'Rider Assigned'}</h4>
-                  <p className="text-[10px] text-slate-450 dark:text-slate-500 mt-0.5">Rating: 4.9 ★ • NearKart Fleet</p>
+                  <p className="text-[10px] text-slate-450 dark:text-slate-500 mt-0.5">Rating: 4.9 ★ • RaashanKart Fleet</p>
                 </div>
               </div>
 

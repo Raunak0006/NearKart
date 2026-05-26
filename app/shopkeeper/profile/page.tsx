@@ -1,13 +1,13 @@
 'use client';
 
 import React, { useState } from 'react';
-import { useNearKart } from '@/lib/context';
+import { useRaashanKart } from '@/lib/context';
 import { Store, Save, Clock, MapPin, Phone, ShieldCheck, HelpCircle } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 
 export default function ShopkeeperProfilePage() {
   const router = useRouter();
-  const { shops, toggleShopStatus } = useNearKart();
+  const { shops, toggleShopStatus } = useRaashanKart();
 
   const shopId = 'shop_3'; // Royal Bakery
   const shop = shops.find(s => s.id === shopId);

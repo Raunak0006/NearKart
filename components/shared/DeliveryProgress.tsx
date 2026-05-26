@@ -41,7 +41,7 @@ export default function DeliveryProgress({ status, type }: DeliveryProgressProps
     },
     {
       label: 'Delivered',
-      description: 'Enjoy your fresh groceries! Thank you for choosing NearKart.',
+      description: 'Enjoy your fresh groceries! Thank you for choosing RaashanKart.',
       icon: CheckCircle2,
       isCompleted: status === 'delivered'
     }

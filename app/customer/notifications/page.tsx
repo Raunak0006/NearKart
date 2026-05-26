@@ -1,12 +1,12 @@
 'use client';
 
 import React from 'react';
-import { useNearKart } from '@/lib/context';
+import { useRaashanKart } from '@/lib/context';
 import NotificationCard from '@/components/shared/NotificationCard';
 import { BellRing, Check } from 'lucide-react';
 
 export default function CustomerNotificationsPage() {
-  const { notifications, markNotificationAsRead } = useNearKart();
+  const { notifications, markNotificationAsRead } = useRaashanKart();
 
   const handleMarkAllRead = () => {
     notifications.forEach(n => {

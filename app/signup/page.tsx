@@ -4,11 +4,11 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { Mail, Lock, User, Phone, ArrowRight } from 'lucide-react';
-import { useNearKart } from '@/lib/context';
+import { useRaashanKart } from '@/lib/context';
 
 export default function SignupPage() {
   const router = useRouter();
-  const { setRole } = useNearKart();
+  const { setRole } = useRaashanKart();
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
@@ -40,14 +40,14 @@ export default function SignupPage() {
           <Link href="/" className="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-[#1a1513] border border-[#3a2f29] shadow-md mb-3 overflow-hidden">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img 
-              src="/NearKart/logo.png" 
-              alt="NearKart Logo" 
+              src="/RaashanKart/logo.png" 
+              alt="RaashanKart Logo" 
               className="h-10 w-10 object-contain"
             />
           </Link>
           <h2 className="text-2xl font-extrabold text-white">Create Account</h2>
           <p className="text-xs text-white/80 mt-1.5 font-medium">
-            Join NearKart to buy or sell groceries instantly
+            Join RaashanKart to buy or sell groceries instantly
           </p>
         </div>
 

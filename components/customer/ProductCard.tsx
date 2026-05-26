@@ -3,14 +3,14 @@
 import React, { useState } from 'react';
 import { Plus, Minus } from 'lucide-react';
 import { Product } from '@/types';
-import { useNearKart } from '@/lib/context';
+import { useRaashanKart } from '@/lib/context';
 
 interface ProductCardProps {
   product: Product;
 }
 
 export default function ProductCard({ product }: ProductCardProps) {
-  const { cart, addToCart, updateCartQuantity } = useNearKart();
+  const { cart, addToCart, updateCartQuantity } = useRaashanKart();
   const [imageError, setImageError] = useState(false);
 
   // Find if product is already in cart

@@ -4,7 +4,7 @@ import React, { createContext, useContext, useState, useEffect } from 'react';
 import { User, Shop, Product, CartItem, Order, Message, Notification, UserRole, OrderStatus } from '../types';
 import { MOCK_SHOPS, MOCK_PRODUCTS, MOCK_NOTIFICATIONS, MOCK_ORDERS, MOCK_CHAT_MESSAGES } from './mockData';
 
-interface NearKartContextType {
+interface RaashanKartContextType {
   role: UserRole;
   setRole: (role: UserRole) => void;
   currentUser: User;
@@ -53,9 +53,9 @@ interface NearKartContextType {
   toggleTheme: () => void;
 }
 
-const NearKartContext = createContext<NearKartContextType | undefined>(undefined);
+const RaashanKartContext = createContext<RaashanKartContextType | undefined>(undefined);
 
-export const NearKartProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+export const RaashanKartProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [role, setRole] = useState<UserRole>('customer');
   const [currentUser, setCurrentUser] = useState<User>({
     id: 'customer_1',
@@ -63,7 +63,7 @@ export const NearKartProvider: React.FC<{ children: React.ReactNode }> = ({ chil
     email: 'Raunaksrivastava@example.com',
     phone: '+1 987 654 3210',
     role: 'customer',
-    avatarUrl: '/NearKart/pug_avatar.png'
+    avatarUrl: '/RaashanKart/pug_avatar.png'
   });
 
   const [shops, setShops] = useState<Shop[]>([]);
@@ -82,7 +82,7 @@ export const NearKartProvider: React.FC<{ children: React.ReactNode }> = ({ chil
     setTheme('light');
     document.documentElement.classList.remove('dark');
     
-    const localRole = localStorage.getItem('nearkart-role') as UserRole;
+    const localRole = localStorage.getItem('raashankart-role') as UserRole;
 
     if (localRole) {
       setRole(localRole);
@@ -90,14 +90,14 @@ export const NearKartProvider: React.FC<{ children: React.ReactNode }> = ({ chil
     }
 
     // Load mock data
-    const localShops = localStorage.getItem('nearkart-shops');
-    const localProducts = localStorage.getItem('nearkart-products');
-    const localOrders = localStorage.getItem('nearkart-orders');
-    const localMessages = localStorage.getItem('nearkart-messages');
-    const localNotifications = localStorage.getItem('nearkart-notifications');
-    const localFavShops = localStorage.getItem('nearkart-fav-shops');
-    const localFavProducts = localStorage.getItem('nearkart-fav-products');
-    const localCart = localStorage.getItem('nearkart-cart');
+    const localShops = localStorage.getItem('raashankart-shops');
+    const localProducts = localStorage.getItem('raashankart-products');
+    const localOrders = localStorage.getItem('raashankart-orders');
+    const localMessages = localStorage.getItem('raashankart-messages');
+    const localNotifications = localStorage.getItem('raashankart-notifications');
+    const localFavShops = localStorage.getItem('raashankart-fav-shops');
+    const localFavProducts = localStorage.getItem('raashankart-fav-products');
+    const localCart = localStorage.getItem('raashankart-cart');
 
     setShops(localShops ? JSON.parse(localShops) : MOCK_SHOPS);
     setProducts(localProducts ? JSON.parse(localProducts) : MOCK_PRODUCTS);
@@ -111,35 +111,35 @@ export const NearKartProvider: React.FC<{ children: React.ReactNode }> = ({ chil
 
   // Sync state to localStorage when changed
   useEffect(() => {
-    if (shops.length > 0) localStorage.setItem('nearkart-shops', JSON.stringify(shops));
+    if (shops.length > 0) localStorage.setItem('raashankart-shops', JSON.stringify(shops));
   }, [shops]);
 
   useEffect(() => {
-    if (products.length > 0) localStorage.setItem('nearkart-products', JSON.stringify(products));
+    if (products.length > 0) localStorage.setItem('raashankart-products', JSON.stringify(products));
   }, [products]);
 
   useEffect(() => {
-    localStorage.setItem('nearkart-cart', JSON.stringify(cart));
+    localStorage.setItem('raashankart-cart', JSON.stringify(cart));
   }, [cart]);
 
   useEffect(() => {
-    if (orders.length > 0) localStorage.setItem('nearkart-orders', JSON.stringify(orders));
+    if (orders.length > 0) localStorage.setItem('raashankart-orders', JSON.stringify(orders));
   }, [orders]);
 
   useEffect(() => {
-    if (messages.length > 0) localStorage.setItem('nearkart-messages', JSON.stringify(messages));
+    if (messages.length > 0) localStorage.setItem('raashankart-messages', JSON.stringify(messages));
   }, [messages]);
 
   useEffect(() => {
-    if (notifications.length > 0) localStorage.setItem('nearkart-notifications', JSON.stringify(notifications));
+    if (notifications.length > 0) localStorage.setItem('raashankart-notifications', JSON.stringify(notifications));
   }, [notifications]);
 
   useEffect(() => {
-    localStorage.setItem('nearkart-fav-shops', JSON.stringify(favoriteShops));
+    localStorage.setItem('raashankart-fav-shops', JSON.stringify(favoriteShops));
   }, [favoriteShops]);
 
   useEffect(() => {
-    localStorage.setItem('nearkart-fav-products', JSON.stringify(favoriteProducts));
+    localStorage.setItem('raashankart-fav-products', JSON.stringify(favoriteProducts));
   }, [favoriteProducts]);
 
   const toggleTheme = () => {
@@ -154,7 +154,7 @@ export const NearKartProvider: React.FC<{ children: React.ReactNode }> = ({ chil
         email: 'Raunaksrivastava@example.com',
         phone: '+1 987 654 3210',
         role: 'customer',
-        avatarUrl: '/NearKart/pug_avatar.png'
+        avatarUrl: '/RaashanKart/pug_avatar.png'
       });
     } else {
       setCurrentUser({
@@ -164,14 +164,14 @@ export const NearKartProvider: React.FC<{ children: React.ReactNode }> = ({ chil
         phone: '+1 234 567 8903',
         role: 'shopkeeper',
         shopId: 'shop_3',
-        avatarUrl: '/NearKart/pug_avatar.png'
+        avatarUrl: '/RaashanKart/pug_avatar.png'
       });
     }
   };
 
   const changeRole = (newRole: UserRole) => {
     setRole(newRole);
-    localStorage.setItem('nearkart-role', newRole);
+    localStorage.setItem('raashankart-role', newRole);
     updateUserForRole(newRole);
   };
 
@@ -418,7 +418,7 @@ export const NearKartProvider: React.FC<{ children: React.ReactNode }> = ({ chil
   };
 
   return (
-    <NearKartContext.Provider value={{
+    <RaashanKartContext.Provider value={{
       role,
       setRole: changeRole,
       currentUser,
@@ -453,14 +453,14 @@ export const NearKartProvider: React.FC<{ children: React.ReactNode }> = ({ chil
       toggleTheme
     }}>
       {children}
-    </NearKartContext.Provider>
+    </RaashanKartContext.Provider>
   );
 };
 
-export const useNearKart = () => {
-  const context = useContext(NearKartContext);
+export const useRaashanKart = () => {
+  const context = useContext(RaashanKartContext);
   if (context === undefined) {
-    throw new Error('useNearKart must be used within a NearKartProvider');
+    throw new Error('useRaashanKart must be used within a RaashanKartProvider');
   }
   return context;
 };

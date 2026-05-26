@@ -4,11 +4,11 @@ import React from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Home, Search, ShoppingBag, MessageSquare, User } from 'lucide-react';
-import { useNearKart } from '@/lib/context';
+import { useRaashanKart } from '@/lib/context';
 
 export default function BottomNavigation() {
   const pathname = usePathname();
-  const { cartCount, messages, role } = useNearKart();
+  const { cartCount, messages, role } = useRaashanKart();
 
   // If role is shopkeeper, we use a sidebar instead of bottom navigation
   if (role === 'shopkeeper') return null;

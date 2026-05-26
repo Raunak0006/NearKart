@@ -1,12 +1,12 @@
 'use client';
 
 import React, { useState } from 'react';
-import { useNearKart } from '@/lib/context';
+import { useRaashanKart } from '@/lib/context';
 import OrderCard from '@/components/shopkeeper/OrderCard';
 import { ClipboardList, Package, Truck, CheckSquare } from 'lucide-react';
 
 export default function ShopkeeperOrdersPage() {
-  const { orders } = useNearKart();
+  const { orders } = useRaashanKart();
   const [activeQueue, setActiveQueue] = useState<'pending' | 'preparing' | 'dispatched' | 'completed'>('pending');
 
   const shopId = 'shop_3'; // Royal Bakery
